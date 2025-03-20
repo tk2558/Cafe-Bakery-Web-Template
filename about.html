@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+        </h1>
+        <nav class = "header-menu">
+            <ul class = "header-ul">
+                <li class = "header-li"><a href="index.html">Home</a></li>
+                <li class = "header-li"><a href="#Menu">Menu</a></li>
+                <li class = "header-li"><a href="about.html">About</a></li>
+                <li class = "header-li"><a href="location.html">Location</a></li>
+                <li class = "header-li"><a href="contact.html">Contact</a></li>
+                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class="interface" id="interface"> 
+                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hidden-menu" id = "hidden-menu">
+        <nav class = "hidden-nav">
+            <ul class = "hidden-ul">
+                <li class = "hidden-li"><a href="index.html">Home</a></li>
+                <li class = "hidden-li"><a href="#Menu">Menu</a></li>
+                <li class = "hidden-li"><a href="about.html">About</a></li>
+                <li class = "hidden-li"><a href="location.html">Location</a></li>
+                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class = "about" id = "about"> 
+        <section class = "about-container" id = "about-container">
+            <div class = "about-left" id = "about-left">
+                <div class = "about-title" id = "about-title">
+                    <div class="head">About Us</div>
+                </div>
+                <img class = "about-img" id = "about-img" src="./imgs/front.jpg" alt="aboutImg"></img>
+            </div>
+            <div class = "gap" id = "gap"></div>
+            <article class = "about-right" id = "about-right">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum."
+            </article>
+        </section>
+    </section>
+    <section class = "history" id = "history"> 
+        <section class = "history-container" id = "history-container">
+            <article class = "history-left" id = "history-left">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum."
+            </article>
+            <div class = "gap" id = "gap"></div>
+            <div class = "history-title" id = "history-title">
+                <div class="head">Our History</div>
+            </div>
+        </section>
+    </section>
+
+    <section class ="thanks">
+        <section class = "thanks-container" id = "thanks-container">
+            <div class = "thanks-title">Thanks to our Staff!</div>
+            <div class = "staff-collection">
+                <div class = "staff-item" id = "staff1">
+                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <span class ="staff-name">Name1</span>
+                </div>
+                <div class = "staff-item" id = "staff2">
+                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <span class ="staff-name">Name2</span>
+                </div>
+                <div class = "staff-item" id = "staff3">
+                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <span class ="staff-name">Name3</span>
+                </div>
+                <div class = "staff-item" id = "staff4">
+                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <span class ="staff-name">Name4</span>
+                </div>
+                <div class = "staff-item" id = "staff5">
+                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <span class ="staff-name">Name5</span>
+                </div>
+            </div>
+            <div class = "thanks-staff">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum."
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p class="copyright">&copy; 2025 Mr.Tu Bakery. All rights reserved ● Designed by 
+            <a class = "author" href="https://github.com/tk2558" target = "_blank"> Thomas Kong </a></p>
+        </p>
+        <div class="review-button">
+            <a href="https://www.yelp.com/biz/mr-tu-bakery-flushing" target="_blank">
+                <img src="./assets/yelp-icon.png" class="yelp-icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

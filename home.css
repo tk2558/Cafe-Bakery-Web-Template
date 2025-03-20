@@ -1,0 +1,295 @@
+/* Responsive for Small Screens */
+@media (max-width: 768px) {
+    .location-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .loc-detail, .loc-description {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .loc-btn {
+        margin-inline: auto;
+    }
+
+    .title {
+        margin-top: 10px;
+    }
+}
+
+.gallery-container {
+    width: 100%;
+    min-width: 100%;
+    height: 40rem;
+    background-color: #7D4F44;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.gallery {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.prev-container {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.next-container {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow-X: hidden;
+    z-index: 2; 
+}
+
+.prev-container:hover, .next-container:hover {
+    background-color: gray;
+    opacity: 40%;
+}
+
+.circle-container {
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 1%;
+    min-height: 2rem;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+.gallery-circle {
+    position: relative;
+    width: 1%;
+    min-width: 9px;
+    aspect-ratio: 1;
+    background-color: #92869a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gallery-circle-grey {
+    position: relative;
+    width: 1%;
+    min-width: 9px;
+    aspect-ratio: 1;
+    background-color: #b1abc4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.location-container {
+    width: 100%;
+    min-width: 100%;
+    min-height: 35rem;
+    background-color: #A6B07E;
+    color: #A6B07E;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2%;
+    flex-wrap: wrap;
+}
+
+.loc-detail {
+    width: 25%;
+    min-width: 354px;
+    aspect-ratio: 1;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: auto;
+    position: relative;
+    padding: 1%;
+}
+
+.loc-img {
+    width: 100%;
+    aspect-ratio: 1.25;
+    display: flex;
+    position: relative;
+    object-fit: fill;
+}
+
+.loc-name {
+    color: #1f1f1f;
+    font-size:large;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.loc-add {
+    color:#434343;
+    font-size:medium;
+}
+
+.loc-space {
+    width:2.5%;
+}
+
+.loc-description {
+    width: 20%;
+    min-width: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right:auto;
+}
+
+.title {
+    color: #f9fafb;
+    font-size:XX-large;
+    font-weight: 1000;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-right: auto;
+    top: 0;
+}
+
+.description {
+    color: #f9fafb;
+    font-size: medium;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-right: auto;
+    margin-bottom:  3rem;
+}
+
+.loc-btn {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f9fafb;
+    transition: ease-in-out 500ms;
+    font-size: 1.05em;
+    position: relative;
+    overflow: hidden;
+    margin-right: auto;
+    border: 2px solid #f9fafb;
+    text-decoration: none;
+    margin-bottom: 5%;
+}
+  
+.loc-btn:hover {
+    color: #A6B07E;
+    background-color: #f9fafb;
+    transform: scale(1.05);
+}
+
+.menu-title {
+    color: #595959;
+    font-size: 2.5em; 
+    font-family: "Luckiest Guy";   
+    text-align: center;
+    margin: auto;  
+    position: relative;
+} 
+
+.menu-divider {
+    width: 10%;
+    min-height: .5rem;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #A05A2C;
+}
+
+
+.menu-container {
+    width: 75%;
+    min-height: 15rem;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    min-width: 140px;
+    text-align: center;
+    position: relative;
+}
+
+.menu-icon {
+    width: 100%;
+    aspect-ratio: 1;
+    min-width: 140px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    transition: ease-in-out .1s;
+}
+
+.menu-icon:hover {
+    transform: scale(1.05);
+}
+
+.category-name {
+    color: #595959;
+    width: 100%;
+    font-size: 1.5rem; 
+    font-family: "Luckiest Guy";   
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}

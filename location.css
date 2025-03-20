@@ -1,0 +1,114 @@
+/* Location CSS */
+.map-title {
+    color: #ae6066;
+    font-size:XX-large;
+    font-weight: 1000;
+    font-size: 4rem;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Luckiest Guy"; 
+    width: fit-content;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn-Left .7s ease-out forwards;
+}
+
+#map-flushing {
+    background-color: #fefefe;
+    border-top: 2px solid #474747;
+    border-bottom: 5px solid #474747;
+    border-right: 5px solid #474747;
+    border-left: none;
+}
+
+.map-container {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.gmap {
+    border: 4px solid #434343;
+    background-color: #434343;
+    width: 50%;
+    min-width: 475px;
+    aspect-ratio: 1.75;
+}
+
+.loc-space {
+    width:2.5%;
+}
+
+.map-info {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+}
+
+.map-info span {
+    color: #fefefe;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.map-details {
+    flex-direction: column;
+    display: flex;
+    font-family: "Roboto";
+    border-radius: 20px;
+    padding: 15px 10px;
+    border: 2px solid #fefefe;
+    background-color: #d4a373;
+    box-shadow: 0 0 0 4px #d4a373, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideIn-Right .7s ease-out forwards;
+}
+
+.map-note {
+    color: #fefefe;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1610px) {
+    .map-title {
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    #map-flushing {
+        border: 2px solid #474747;
+    }
+    
+    .map-container {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .map-details {
+        margin-top: 15px;
+        width: 85%;
+    }
+
+    .map-info {
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+    }
+}
