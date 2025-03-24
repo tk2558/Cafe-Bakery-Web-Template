@@ -222,21 +222,26 @@
 .staff-img {
     width: 200px;
     aspect-ratio: 1;
-    border: 3px solid #DE9B72;
+    border: 3px solid #474747;
 }
 
 .staff-name {
+    width: 100%;
     color: #fefefe;
+    background-color: #474747;
     margin-inline: auto;
+    text-align: center;
     font-size: 17px;
     padding: 10px 10px;
+    border: 3px solid #474747;
+    border-top: none;
 }
 
 .thanks-staff {
     width: 80%;
     color: #fefefe;
     border: 2px solid #fefefe;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 17px;
     text-align: center;
     padding: 10px 5px;

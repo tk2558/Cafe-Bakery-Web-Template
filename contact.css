@@ -42,7 +42,6 @@
     padding: 15px 0;
     width: 30%;
     min-width: 470px;
-    border-top: 0 none;
     display: flex;
     flex-direction: column;
 }
@@ -70,7 +69,7 @@ input, textarea {
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid #474747;
-    border-radius: 5px;
+    border-radius: 12px;
     background: #eeeeee;
     margin-left: auto;
     margin-right: auto;
@@ -91,7 +90,10 @@ textarea {
     margin-bottom: 2.5%;
     padding: 15px 10px;
     cursor: pointer;
-    border-radius: 5px;
     font-weight: bold;
     transition: box-shadow 0.3s ease-in-out;
-  }
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+}

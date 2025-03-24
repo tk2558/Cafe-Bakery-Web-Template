@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Chocolate Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Rollcake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Fresh Fruit Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Ice Cream Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Cream Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Mocha Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Cheesecake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Tiramisu Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Egg Tart",
+        "price": "$2.99",
+        "category": "pastry",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Macaron",
+        "price": "$2.99",
+        "category": "pastry",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Mochi",
+        "price": "$2.99",
+        "category": "pastry",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Pineapple Bun",
+        "price": "$2.79",
+        "category": "pastry",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Blueberry Muffin",
+        "price": "$2.50",
+        "category": "pastry",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Sesame Ball",
+        "price": "$2.59",
+        "category": "pastry",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Baguette",
+        "price": "$3.50",
+        "category": "bread",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Pork Bun",
+        "price": "$3.50",
+        "category": "bread",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Raisin Bread",
+        "price": "$3.50",
+        "category": "bread",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Cream and Coconut Bun",
+        "price": "$3.50",
+        "category": "bread",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Croissant",
+        "price": "$3.50",
+        "category": "bread",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Espresso",
+        "price": "$1.99",
+        "category": "drinks",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Water Bottle",
+        "price": "$1.99",
+        "category": "drinks",
+        "image": "./assets/tmp.jpg"
+    },    
+    {
+        "name": "Matcha Latte",
+        "price": "$1.99",
+        "category": "drinks",
+        "image": "./assets/tmp.jpg"
+    },    
+    {
+        "name": "Latte",
+        "price": "$1.99",
+        "category": "drinks",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Iced Coffee",
+        "price": "$1.99",
+        "category": "drinks",
+        "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Cappuccino",
+        "price": "$1.99",
+        "category": "drinks",
+        "image": "./assets/tmp.jpg"
+    }
+]

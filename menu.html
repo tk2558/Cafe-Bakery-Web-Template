@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+        </h1>
+        <nav class = "header-menu">
+            <ul class = "header-ul">
+                <li class = "header-li"><a href="index.html">Home</a></li>
+                <li class = "header-li"><a href="menu.html">Menu</a></li>
+                <li class = "header-li"><a href="about.html">About</a></li>
+                <li class = "header-li"><a href="location.html">Location</a></li>
+                <li class = "header-li"><a href="contact.html">Contact</a></li>
+                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class="interface" id="interface"> 
+                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hidden-menu" id = "hidden-menu">
+        <nav class = "hidden-nav">
+            <ul class = "hidden-ul">
+                <li class = "hidden-li"><a href="index.html">Home</a></li>
+                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
+                <li class = "hidden-li"><a href="about.html">About</a></li>
+                <li class = "hidden-li"><a href="location.html">Location</a></li>
+                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+            </ul>
+        </nav>
+    </section>
+
+
+    <section class = "menu-container" id = "menu-container">
+        <div class = "menu-top" id = "menu-top">
+            <div class = "menu-title" id = "menu-title">Menu</div>
+            <div class = "menu-categories" id = "menu-categories">
+                <div class = "menu-sub" id = "menu-all">All</div> 
+                <div class = "menu-sub" id = "menu-pastry">Pastry</div>      
+                <div class = "menu-sub" id = "menu-cake">Cake</div>      
+                <div class = "menu-sub" id = "menu-bread">Bread</div>   
+                <div class = "menu-sub" id = "menu-drinks">Drinks</div>   
+            </div>
+        </div>
+        <div class = "menu-divider" id = "menu-divider"></div>
+        <div class = "menu-content" id = "menu-content"></div>
+        <div class="menu-pagination" id="menu-pagination">
+            <button id="prev-page" disabled>❮ Prev</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page">Next ❯</button>
+        </div>
+    </section>
+
+
+    <footer>
+        <p class="copyright">&copy; 2025 Mr.Tu Bakery. All rights reserved ● Designed by 
+            <a class = "author" href="https://github.com/tk2558" target = "_blank"></a> Thomas Kong </a></p>
+        </p>
+        <div class="review-button">
+            <a href="https://www.yelp.com/biz/mr-tu-bakery-flushing" target="_blank">
+                <img src="./assets/yelp-icon.png" class="yelp-icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const selectedCategory = getQueryParameter('category');
+    const categories = document.querySelectorAll('.menu-sub');
+    const allCategory = document.getElementById('menu-all');
+
+    const menuContainer = document.getElementById("menu-content");
+    const menuContent = document.getElementById("menu-content");
+    const prevPageBtn = document.getElementById("prev-page");
+    const nextPageBtn = document.getElementById("next-page");
+    const pageInfo = document.getElementById("page-info");
+
+    const itemsPerPage = 15; // Number of items per page
+    let currentPage = 1;
+
+    async function loadMenuItems(category = "all") {
+        try {
+            const response = await fetch("./menu.json");
+            const menuItems = await response.json();
+
+            menuContainer.innerHTML = ""; 
+            const filteredItems = category === "all" 
+                ? menuItems 
+                : menuItems.filter(item => item.category === category);
+
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const itemsToShow = filteredItems.slice(start, end);
+
+            itemsToShow.forEach(item => {
+                const menuItem = document.createElement("div");
+                menuItem.classList.add("menu-item");
+                menuItem.innerHTML = `
+                    <img class="menu-img" src="${item.image}" alt="${item.name}">
+                    <span class="menu-name">${item.name}</span>
+                    <span class="menu-price">${item.price}</span>
+                `;
+                menuContent.appendChild(menuItem);
+            });
+            
+            pageInfo.textContent = `Page ${currentPage}`;
+            prevPageBtn.disabled = currentPage === 1;
+            nextPageBtn.disabled = currentPage * itemsPerPage >= filteredItems.length;
+
+            prevPageBtn.addEventListener("click", function () {
+                if (currentPage > 1) {
+                    currentPage--;
+                    if (selectedCategory) { loadMenuItems(selectedCategory); }
+                    else { loadMenuItems(); }
+                }
+            });
+
+            nextPageBtn.addEventListener("click", function () {
+                if (currentPage * itemsPerPage < menuItems.length) {
+                    currentPage++;
+                    if (selectedCategory) { loadMenuItems(selectedCategory); }
+                    else { loadMenuItems(); }
+                }
+            });
+        } catch (error) {  console.error("Error loading menu:", error); }
+    }
+
+    if (selectedCategory) {
+        const selectedItem = document.getElementById(`menu-${selectedCategory}`);
+        if (selectedItem) {
+            selectedItem.classList.add('current-cat');
+            loadMenuItems(selectedCategory);
+        }
+    }
+    else {
+        allCategory.classList.add('current-cat');
+        loadMenuItems(); // Load menu items for selected category
+    }
+
+    categories.forEach(category => {
+        category.addEventListener('click', () => {
+            categories.forEach(item => item.classList.remove('current-cat'));
+            category.classList.add('current-cat');
+            //console.log(category.textContent.toLowerCase());
+            currentPage = 1;
+            loadMenuItems(category.textContent.toLowerCase());
+        });
+    });
+});
+</script>

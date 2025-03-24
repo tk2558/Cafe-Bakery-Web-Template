@@ -20,7 +20,7 @@
         <nav class = "header-menu">
             <ul class = "header-ul">
                 <li class = "header-li"><a href="index.html">Home</a></li>
-                <li class = "header-li"><a href="#Menu">Menu</a></li>
+                <li class = "header-li"><a href="menu.html">Menu</a></li>
                 <li class = "header-li"><a href="about.html">About</a></li>
                 <li class = "header-li"><a href="location.html">Location</a></li>
                 <li class = "header-li"><a href="contact.html">Contact</a></li>
@@ -36,7 +36,7 @@
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
                 <li class = "hidden-li"><a href="index.html">Home</a></li>
-                <li class = "hidden-li"><a href="#Menu">Menu</a></li>
+                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
                 <li class = "hidden-li"><a href="about.html">About</a></li>
                 <li class = "hidden-li"><a href="location.html">Location</a></li>
                 <li class = "hidden-li"><a href="contact.html">Contact</a></li>
@@ -78,22 +78,22 @@
     <div class = "menu-title" id = "menu-title">Menu Categories</div>
     <div class = "menu-divider" id = "menu-divider"></div>
     <section class = "menu-container" id = "menu-container">
-        <div class = "menu-item">
-            <img class = "menu-icon" src="./assets/pastry.png"></img>
+        <a href= 'menu.html?category=pastry' class = "menu-item">
+            <img class = "menu-icon" src="./assets/mooncake.png"></img>
             <span class ="category-name">Pastry</span>
-        </div>
-        <div class = "menu-item">
-            <img class = "menu-icon" src="./assets/cake.png"></img>
+        </a>
+        <a href= 'menu.html?category=cake' class = "menu-item">
+            <img class = "menu-icon" src="./assets/rollcake.png"></img>
             <span class ="category-name">Cake</span>
-        </div>
-        <div class = "menu-item">
+        </a>
+        <a href= 'menu.html?category=bread' class = "menu-item">
             <img class = "menu-icon" src="./assets/bread.png"></img>
             <span class ="category-name">Bread</span>
-        </div>        
-        <div class = "menu-item">
-            <img class = "menu-icon" src="./assets/drink.png"></img>
+        </a>        
+        <a href= 'menu.html?category=drinks' class = "menu-item">
+            <img class = "menu-icon" src="./assets/tea.png"></img>
             <span class ="category-name">Drinks</span>
-        </div>
+        </a>
     </section>
 
     <footer>
@@ -108,3 +108,41 @@
     </footer>
 </body>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    let currentIndex = 0;
+    const circles = document.querySelectorAll(".gallery-circle, .gallery-circle-grey");
+    const gallery = document.getElementById("gallery");
+    const totalCircles = circles.length;
+    const galleryImgs = [
+        "./imgs/g1.jpg",
+        "./imgs/g2.jpg",
+        "./imgs/g3.jpg",
+        "./imgs/g4.jpg",
+        "./imgs/g5.jpg"
+    ];
+    
+    document.getElementById("next").addEventListener("click", () => {
+        circles[currentIndex].classList.remove("gallery-circle");
+        circles[currentIndex].classList.add("gallery-circle-grey");
+        
+        currentIndex = (currentIndex + 1) % totalCircles;
+        
+        circles[currentIndex].classList.remove("gallery-circle-grey");
+        circles[currentIndex].classList.add("gallery-circle");
+        gallery.src = `${galleryImgs[currentIndex]}`;
+    });
+    
+    document.getElementById("prev").addEventListener("click", () => {
+        circles[currentIndex].classList.remove("gallery-circle");
+        circles[currentIndex].classList.add("gallery-circle-grey");
+        
+        currentIndex = (currentIndex - 1 + totalCircles) % totalCircles;
+        
+        circles[currentIndex].classList.remove("gallery-circle-grey");
+        circles[currentIndex].classList.add("gallery-circle");
+        gallery.src = `${galleryImgs[currentIndex]}`;
+    });
+});
+</script>

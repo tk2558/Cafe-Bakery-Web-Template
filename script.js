@@ -10,38 +10,59 @@ document.addEventListener("DOMContentLoaded", function () {
      });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    let currentIndex = 0;
-    const circles = document.querySelectorAll(".gallery-circle, .gallery-circle-grey");
-    const gallery = document.getElementById("gallery");
-    const totalCircles = circles.length;
-    const galleryImgs = [
-        "./imgs/g1.jpg",
-        "./imgs/g2.jpg",
-        "./imgs/g3.jpg",
-        "./imgs/g4.jpg",
-        "./imgs/g5.jpg"
-    ];
+/*
+document.addEventListener("DOMContentLoaded", function () {
+    const itemsPerPage = 15; // Number of items per page
+    let currentPage = 1;
     
-    document.getElementById("next").addEventListener("click", () => {
-        circles[currentIndex].classList.remove("gallery-circle");
-        circles[currentIndex].classList.add("gallery-circle-grey");
-        
-        currentIndex = (currentIndex + 1) % totalCircles;
-        
-        circles[currentIndex].classList.remove("gallery-circle-grey");
-        circles[currentIndex].classList.add("gallery-circle");
-        gallery.src = `${galleryImgs[currentIndex]}`;
+    const menuContent = document.getElementById("menu-content");
+    const prevPageBtn = document.getElementById("prev-page");
+    const nextPageBtn = document.getElementById("next-page");
+    const pageInfo = document.getElementById("page-info");
+
+    // Mock Menu Items (Replace with actual data)
+    const menuItems = Array.from({ length: 32 }, (_, i) => ({
+        name: `Item ${i + 1}`,
+        price: `$${(Math.random() * 10).toFixed(2)}`,
+        imgSrc: "./assets/tmp.jpg"
+    }));
+
+    function renderMenu() {
+        menuContent.innerHTML = ""; // Clear existing items
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const itemsToShow = menuItems.slice(start, end);
+
+        itemsToShow.forEach(item => {
+            const menuItem = document.createElement("div");
+            menuItem.classList.add("menu-item");
+            menuItem.innerHTML = `
+                <img class="menu-img" src="${item.imgSrc}" alt="${item.name}">
+                <span class="menu-name">${item.name}</span>
+                <span class="menu-price">${item.price}</span>
+            `;
+            menuContent.appendChild(menuItem);
+        });
+
+        pageInfo.textContent = `Page ${currentPage}`;
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage * itemsPerPage >= menuItems.length;
+    }
+
+    prevPageBtn.addEventListener("click", function () {
+        if (currentPage > 1) {
+            currentPage--;
+            renderMenu();
+        }
     });
-    
-    document.getElementById("prev").addEventListener("click", () => {
-        circles[currentIndex].classList.remove("gallery-circle");
-        circles[currentIndex].classList.add("gallery-circle-grey");
-        
-        currentIndex = (currentIndex - 1 + totalCircles) % totalCircles;
-        
-        circles[currentIndex].classList.remove("gallery-circle-grey");
-        circles[currentIndex].classList.add("gallery-circle");
-        gallery.src = `${galleryImgs[currentIndex]}`;
+
+    nextPageBtn.addEventListener("click", function () {
+        if (currentPage * itemsPerPage < menuItems.length) {
+            currentPage++;
+            renderMenu();
+        }
     });
+
+    renderMenu(); // Initial render
 });
+*/
