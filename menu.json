@@ -1,53 +1,5 @@
 [
     {
-        "name": "Chocolate Cake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Rollcake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Fresh Fruit Cake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Ice Cream Cake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Cream Cake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Mocha Cake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Cheesecake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Tiramisu Cake",
-        "price": "$5.99",
-        "category": "cake",
-        "image": "./assets/tmp.jpg"
-    },
-    {
         "name": "Egg Tart",
         "price": "$2.99",
         "category": "pastry",
@@ -88,6 +40,54 @@
         "price": "$3.50",
         "category": "bread",
         "image": "./assets/tmp.jpg"
+    },
+    {
+        "name": "Chocolate Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/chocolate-cake.jpg"
+    },
+    {
+        "name": "Rollcake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/rollcake.jpg"
+    },
+    {
+        "name": "Fresh Fruit Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/fruit-cake.jpg"
+    },
+    {
+        "name": "Ice Cream Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/ice-cream-cake.jpg"
+    },
+    {
+        "name": "Cream Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/cream-cake.jpg"
+    },
+    {
+        "name": "Mocha Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/mocha-cake.jpg"
+    },
+    {
+        "name": "Cheesecake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/cheesecake.jpg"
+    },
+    {
+        "name": "Tiramisu Cake",
+        "price": "$5.99",
+        "category": "cake",
+        "image": "./menu/tiramisu-cake.jpg"
     },
     {
         "name": "Pork Bun",

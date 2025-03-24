@@ -87,7 +87,7 @@ function getQueryParameter(name) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const selectedCategory = getQueryParameter('category');
+    let selectedCategory = getQueryParameter('category');
     const categories = document.querySelectorAll('.menu-sub');
     const allCategory = document.getElementById('menu-all');
 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const menuItem = document.createElement("div");
                 menuItem.classList.add("menu-item");
                 menuItem.innerHTML = `
-                    <img class="menu-img" src="${item.image}" alt="${item.name}">
+                    <img class = "menu-img" src="${item.image}" alt="${item.name}>
                     <span class="menu-name">${item.name}</span>
                     <span class="menu-price">${item.price}</span>
                 `;
@@ -156,16 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else {
         allCategory.classList.add('current-cat');
-        loadMenuItems(); // Load menu items for selected category
+        loadMenuItems(); 
     }
 
     categories.forEach(category => {
         category.addEventListener('click', () => {
             categories.forEach(item => item.classList.remove('current-cat'));
             category.classList.add('current-cat');
-            //console.log(category.textContent.toLowerCase());
             currentPage = 1;
+            selectedCategory = category.textContent.toLowerCase();
             loadMenuItems(category.textContent.toLowerCase());
+            window.history.replaceState({}, document.title, `/menu.html?category=${selectedCategory}`);
         });
     });
 });
