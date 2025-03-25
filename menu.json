@@ -3,43 +3,37 @@
         "name": "Egg Tart",
         "price": "$2.99",
         "category": "pastry",
-        "image": "./assets/tmp.jpg"
+        "image": "./menu/egg-tart.jpg"
     },
     {
         "name": "Macaron",
         "price": "$2.99",
         "category": "pastry",
-        "image": "./assets/tmp.jpg"
+        "image": "./menu/macaron.jpg"
     },
     {
         "name": "Mochi",
         "price": "$2.99",
         "category": "pastry",
-        "image": "./assets/tmp.jpg"
+        "image": "./menu/mochi.jpg"
     },
     {
         "name": "Pineapple Bun",
         "price": "$2.79",
         "category": "pastry",
-        "image": "./assets/tmp.jpg"
+        "image": "./menu/pineapple-bun.jpg"
     },
     {
         "name": "Blueberry Muffin",
         "price": "$2.50",
         "category": "pastry",
-        "image": "./assets/tmp.jpg"
+        "image": "./menu/muffin.jpg"
     },
     {
         "name": "Sesame Ball",
         "price": "$2.59",
         "category": "pastry",
-        "image": "./assets/tmp.jpg"
-    },
-    {
-        "name": "Baguette",
-        "price": "$3.50",
-        "category": "bread",
-        "image": "./assets/tmp.jpg"
+        "image": "./menu/seasame-ball.jpg"
     },
     {
         "name": "Chocolate Cake",
@@ -88,6 +82,12 @@
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/tiramisu-cake.jpg"
+    },
+    {
+        "name": "Baguette",
+        "price": "$3.50",
+        "category": "bread",
+        "image": "./assets/tmp.jpg"
     },
     {
         "name": "Pork Bun",

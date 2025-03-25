@@ -153,8 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedItem.classList.add('current-cat');
             loadMenuItems(selectedCategory);
         }
-    }
-    else {
+    } else {
         allCategory.classList.add('current-cat');
         loadMenuItems(); 
     }
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category.classList.add('current-cat');
             currentPage = 1;
             selectedCategory = category.textContent.toLowerCase();
-            loadMenuItems(category.textContent.toLowerCase());
+            loadMenuItems(selectedCategory);
             window.history.replaceState({}, document.title, `/menu.html?category=${selectedCategory}`);
         });
     });

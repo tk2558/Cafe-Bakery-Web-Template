@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Template</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -15,18 +15,18 @@
 <body>
     <header>
         <h1 class="logo">
-            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+            <a href="./chinese-home.html"><img src="../assets/logo.jpg" alt="logoImg"></a>
         </h1>
         <nav class = "header-menu">
             <ul class = "header-ul">
-                <li class = "header-li"><a href="index.html">Home</a></li>
-                <li class = "header-li"><a href="menu.html">Menu</a></li>
-                <li class = "header-li"><a href="about.html">About</a></li>
-                <li class = "header-li"><a href="location.html">Location</a></li>
-                <li class = "header-li"><a href="contact.html">Contact</a></li>
-                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "header-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "header-li"><a href="about.html">關於大班</a></li>
+                <li class = "header-li"><a href="location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
-                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                    <img class = "interface-menu" id = "interface-menu" src="../assets/interface.png"></img>
                 </li>
             </ul>
         </nav>
@@ -35,32 +35,32 @@
     <section class="hidden-menu" id = "hidden-menu">
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
-                <li class = "hidden-li"><a href="index.html">Home</a></li>
-                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
-                <li class = "hidden-li"><a href="about.html">About</a></li>
-                <li class = "hidden-li"><a href="location.html">Location</a></li>
-                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
-                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+                <li class = "hidden-li"><a href="index.html">主頁</a></li>
+                <li class = "hidden-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "hidden-li"><a href="about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="contact.html">聯絡我們</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
         </nav>
     </section>
 
     <section class = "contact-container" id = "contact-container">
         <div class = "contact-top" id = "contact-top">
-            <div class = "contact-title" id = "contact-title">Contact Us</div>
+            <div class = "contact-title" id = "contact-title">聯絡我們</div>
             <div class = "divider" id = "divider"></div>
         </div>
         <div class = "contact-content" id = "contact-content">
             <form class = "contact-form" id = "contact-form">
-                <span>Name:</span>
-                    <input type="text" name="name" id="name" placeholder="Enter your Full Name" required>
-                <span>Email:</span>
-                    <input type="email" name="email" id="email" placeholder="Enter your Email" required>
-                <span>Message:</span>
-                    <textarea name="message" id="message" placeholder="Message..." required></textarea>
+                <span>姓名:</span>
+                    <input type="text" name="name" id="name" placeholder="輸入您的全名" required>
+                <span>電子郵件:</span>
+                    <input type="email" name="email" id="email" placeholder="輸入您的電子郵件" required>
+                <span>訊息:</span>
+                    <textarea name="message" id="message" placeholder="訊息..." required></textarea>
                     <input type="text" name="_gotcha" style="display:none">
                     <input type="hidden" name="_captcha" value="false">
-                    <button class="send-btn" id ="send-btn">Send Message</button>
+                    <button class="send-btn" id ="send-btn">發送訊息</button>
                 </form>
         </div>
     </section>
@@ -77,16 +77,17 @@
     </footer>
 </body>
 </html>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const langSwitch = document.getElementById("lang-toggle");
         const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
         
         langSwitch.addEventListener("click", function () {
-            window.location.href =  './chinese/chinese-contact.html';
-        });
+            window.location.href = '../contact.html';
+         });
         hiddenlangSwitch.addEventListener("click", function () {
-            window.location.href =  './chinese/chinese-contact.html';
+            window.location.href = '../contact.html';
         });
     });
 </script>

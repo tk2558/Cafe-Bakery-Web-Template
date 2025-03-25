@@ -107,8 +107,13 @@
     aspect-ratio: 1;
     border-radius: 10px;
     background-color: #fefefe;
-    object-fit: cover;
-    margin-bottom:5px;
+    object-fit: fill;
+    margin-bottom: 5px;
+    transition: ease-in-out .01s;
+}
+
+.menu-img:hover {
+    transform: scale(1.05);
 }
 
 .menu-name {

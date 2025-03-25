@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Template</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -15,18 +15,18 @@
 <body>
     <header>
         <h1 class="logo">
-            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+            <a href="./chinese-home.html"><img src="../assets/logo.jpg" alt="logoImg"></a>
         </h1>
         <nav class = "header-menu">
             <ul class = "header-ul">
-                <li class = "header-li"><a href="index.html">Home</a></li>
-                <li class = "header-li"><a href="menu.html">Menu</a></li>
-                <li class = "header-li"><a href="about.html">About</a></li>
-                <li class = "header-li"><a href="location.html">Location</a></li>
-                <li class = "header-li"><a href="contact.html">Contact</a></li>
-                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "header-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "header-li"><a href="about.html">關於大班</a></li>
+                <li class = "header-li"><a href="location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
-                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                    <img class = "interface-menu" id = "interface-menu" src="../assets/interface.png"></img>
                 </li>
             </ul>
         </nav>
@@ -35,18 +35,18 @@
     <section class="hidden-menu" id = "hidden-menu">
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
-                <li class = "hidden-li"><a href="index.html">Home</a></li>
-                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
-                <li class = "hidden-li"><a href="about.html">About</a></li>
-                <li class = "hidden-li"><a href="location.html">Location</a></li>
-                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
-                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+                <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "hidden-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "hidden-li"><a href="about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
         </nav>
     </section>
 
-    <section class = "gallery-container" id = "gallery-container" src="./imgs/g1.jpg">
-        <img class = "gallery" id = "gallery" src="./imgs/g1.jpg"></img>
+    <section class = "gallery-container" id = "gallery-container" src="../imgs/g1.jpg">
+        <img class = "gallery" id = "gallery" src="../imgs/g1.jpg"></img>
         <div class = "prev-container" id = "prev"></div>
         <div class = "next-container" id = "next"></div>
     </section>
@@ -61,38 +61,38 @@
 
     <section class = "location-container" id = "location-container">
         <div class = "loc-detail" id = "loc-detail">
-            <img class = "loc-img" id = "loc-img" src="./imgs/front.jpg" alt="locImg"></img>
+            <img class = "loc-img" id = "loc-img" src="../imgs/front.jpg" alt="locImg"></img>
             <div class = "loc-name" id = "loc-name">Mr.Tu Bakery Inc</div>
             <div class = "loc-add" id = "loc-add">136-29 Roosevelt Ave, Flushing, NY 11354</div>
         </div>
         <div class = "loc-space"></div>
         <div class = "loc-description" id = "loc-descript">
-            <h2 class = "title" id = "title">Visit Our Store!</h2>
+            <h2 class = "title" id = "title">參觀我們的商店！</h2>
             <article class = "description" id = "description">
-                Visit our location for access to our full menu complete with classic Asian pastries, drinks and more!
+                請造訪我們的地點，以獲得我們的完整菜單，包括經典的亞洲糕點、飲料等！
             </article>
-            <a href="location.html" class = "loc-btn" id = "loc-btn">View Location</a>
+            <a href="location.html" class = "loc-btn" id = "loc-btn">查看位置</a>
         </div>
     </section>
 
-    <div class = "menu-title" id = "menu-title">Menu Categories</div>
+    <div class = "menu-title" id = "menu-title">菜單類別</div>
     <div class = "menu-divider" id = "menu-divider"></div>
     <section class = "menu-container" id = "menu-container">
         <a href= 'menu.html?category=pastry' class = "menu-item">
-            <img class = "menu-icon" src="./assets/mooncake.png"></img>
-            <span class ="category-name">Pastry</span>
+            <img class = "menu-icon" src="../assets/mooncake.png"></img>
+            <span class ="category-name">糕點</span>
         </a>
         <a href= 'menu.html?category=cake' class = "menu-item">
-            <img class = "menu-icon" src="./assets/rollcake.png"></img>
-            <span class ="category-name">Cake</span>
+            <img class = "menu-icon" src="../assets/rollcake.png"></img>
+            <span class ="category-name">蛋糕</span>
         </a>
         <a href= 'menu.html?category=bread' class = "menu-item">
-            <img class = "menu-icon" src="./assets/bread.png"></img>
-            <span class ="category-name">Bread</span>
+            <img class = "menu-icon" src="../assets/bread.png"></img>
+            <span class ="category-name">麵包</span>
         </a>        
         <a href= 'menu.html?category=drinks' class = "menu-item">
-            <img class = "menu-icon" src="./assets/tea.png"></img>
-            <span class ="category-name">Drinks</span>
+            <img class = "menu-icon" src="../assets/tea.png"></img>
+            <span class ="category-name">飲料</span>
         </a>
     </section>
 
@@ -102,12 +102,13 @@
         </p>
         <div class="review-button">
             <a href="https://www.yelp.com/biz/mr-tu-bakery-flushing" target="_blank">
-                <img src="./assets/yelp-icon.png" class="yelp-icon">
+                <img src="../assets/yelp-icon.png" class="yelp-icon">
             </a>
         </div>
     </footer>
 </body>
 </html>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
@@ -115,11 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const gallery = document.getElementById("gallery");
     const totalCircles = circles.length;
     const galleryImgs = [
-        "./imgs/g1.jpg",
-        "./imgs/g2.jpg",
-        "./imgs/g3.jpg",
-        "./imgs/g4.jpg",
-        "./imgs/g5.jpg"
+        "../imgs/g1.jpg",
+        "../imgs/g2.jpg",
+        "../imgs/g3.jpg",
+        "../imgs/g4.jpg",
+        "../imgs/g5.jpg"
     ];
     
     document.getElementById("next").addEventListener("click", () => {
@@ -143,15 +144,15 @@ document.addEventListener("DOMContentLoaded", () => {
         circles[currentIndex].classList.add("gallery-circle");
         gallery.src = `${galleryImgs[currentIndex]}`;
     });
-
+    
     const langSwitch = document.getElementById("lang-toggle");
     const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
     
     langSwitch.addEventListener("click", function () {
-        window.location.href =  './chinese/chinese-home.html';
-    });
+        window.location.href = '../index.html';
+     });
     hiddenlangSwitch.addEventListener("click", function () {
-        window.location.href = './chinese/chinese-home.html';
+        window.location.href = '../index.html';
     });
 });
 </script>

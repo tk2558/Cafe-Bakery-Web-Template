@@ -16,7 +16,7 @@ This is an unofficial bakery website built using **HTML, CSS, JavaScript, and JS
 To run the project locally:
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/mr-tu-bakery.git
+git clone https://github.com/tk2558/Cafe-Bakery-Web-Template
 
 # Navigate into the project folder
 cd Cafe-Bakery-Web-Template
@@ -25,7 +25,7 @@ cd Cafe-Bakery-Web-Template
 open index.html  # MacOS
 start index.html # Windows
 ```
-Or simply open `index.html` in your browser.
+Or open `index.html` in your browser after downloading.
 
 ## 🛠️ Technologies Used
 - **HTML5** - Structure
