@@ -1,150 +1,175 @@
 [
     {
         "name": "Egg Tart",
+        "chinese_name": "蛋塔",
         "price": "$2.99",
         "category": "pastry",
         "image": "./menu/egg-tart.jpg"
     },
     {
         "name": "Macaron",
+        "chinese_name": "馬卡龍",
         "price": "$2.99",
         "category": "pastry",
         "image": "./menu/macaron.jpg"
     },
     {
         "name": "Mochi",
+        "chinese_name": "麻糬",
         "price": "$2.99",
         "category": "pastry",
         "image": "./menu/mochi.jpg"
     },
     {
         "name": "Pineapple Bun",
+        "chinese_name": "鳳梨包",
         "price": "$2.79",
         "category": "pastry",
         "image": "./menu/pineapple-bun.jpg"
     },
     {
         "name": "Blueberry Muffin",
+        "chinese_name": "藍莓鬆餅",
         "price": "$2.50",
         "category": "pastry",
         "image": "./menu/muffin.jpg"
     },
     {
         "name": "Sesame Ball",
+        "chinese_name": "芝麻球",
         "price": "$2.59",
         "category": "pastry",
         "image": "./menu/seasame-ball.jpg"
     },
     {
         "name": "Chocolate Cake",
+        "chinese_name": "巧克力蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/chocolate-cake.jpg"
     },
     {
         "name": "Rollcake",
+        "chinese_name": "蛋糕卷",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/rollcake.jpg"
     },
     {
         "name": "Fresh Fruit Cake",
+        "chinese_name": "新鮮水果蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/fruit-cake.jpg"
     },
     {
         "name": "Ice Cream Cake",
+        "chinese_name": "冰淇淋蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/ice-cream-cake.jpg"
     },
     {
         "name": "Cream Cake",
+        "chinese_name": "奶油蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/cream-cake.jpg"
     },
     {
         "name": "Mocha Cake",
+        "chinese_name": "摩卡蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/mocha-cake.jpg"
     },
     {
         "name": "Cheesecake",
+        "chinese_name": "起司蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/cheesecake.jpg"
     },
     {
         "name": "Tiramisu Cake",
+        "chinese_name": "提拉米蘇蛋糕",
         "price": "$5.99",
         "category": "cake",
         "image": "./menu/tiramisu-cake.jpg"
     },
     {
         "name": "Baguette",
+        "chinese_name": "長棍麵包",
         "price": "$3.50",
         "category": "bread",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Pork Bun",
+        "chinese_name": "豬肉包",
         "price": "$3.50",
         "category": "bread",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Raisin Bread",
+        "chinese_name": "葡萄乾麵包",
         "price": "$3.50",
         "category": "bread",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Cream and Coconut Bun",
+        "chinese_name": "奶油椰子麵包",
         "price": "$3.50",
         "category": "bread",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Croissant",
+        "chinese_name": "羊角麵包",
         "price": "$3.50",
         "category": "bread",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Espresso",
+        "chinese_name": "濃縮咖啡",
         "price": "$1.99",
         "category": "drinks",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Water Bottle",
+        "chinese_name": "水瓶",
         "price": "$1.99",
         "category": "drinks",
         "image": "./assets/tmp.jpg"
     },    
     {
         "name": "Matcha Latte",
+        "chinese_name": "抹茶拿鐵",
         "price": "$1.99",
         "category": "drinks",
         "image": "./assets/tmp.jpg"
     },    
     {
         "name": "Latte",
+        "chinese_name": "拿鐵",
         "price": "$1.99",
         "category": "drinks",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Iced Coffee",
+        "chinese_name": "冰咖啡",
         "price": "$1.99",
         "category": "drinks",
         "image": "./assets/tmp.jpg"
     },
     {
         "name": "Cappuccino",
+        "chinese_name": "卡布奇諾",
         "price": "$1.99",
         "category": "drinks",
         "image": "./assets/tmp.jpg"

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Template</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -15,18 +15,18 @@
 <body>
     <header>
         <h1 class="logo">
-            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+            <a href="./chinese-home.html"><img src="../assets/logo.jpg" alt="logoImg"></a>
         </h1>
         <nav class = "header-menu">
             <ul class = "header-ul">
-                <li class = "header-li"><a href="index.html">Home</a></li>
-                <li class = "header-li"><a href="menu.html">Menu</a></li>
-                <li class = "header-li"><a href="about.html">About</a></li>
-                <li class = "header-li"><a href="location.html">Location</a></li>
-                <li class = "header-li"><a href="contact.html">Contact</a></li>
-                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "header-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "header-li"><a href="about.html">關於大班</a></li>
+                <li class = "header-li"><a href="location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
-                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                    <img class = "interface-menu" id = "interface-menu" src="../assets/interface.png"></img>
                 </li>
             </ul>
         </nav>
@@ -35,34 +35,33 @@
     <section class="hidden-menu" id = "hidden-menu">
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
-                <li class = "hidden-li"><a href="index.html">Home</a></li>
-                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
-                <li class = "hidden-li"><a href="about.html">About</a></li>
-                <li class = "hidden-li"><a href="location.html">Location</a></li>
-                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
-                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+                <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "hidden-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "hidden-li"><a href="about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
         </nav>
     </section>
 
-
     <section class = "menu-container" id = "menu-container">
         <div class = "menu-top" id = "menu-top">
-            <div class = "menu-title" id = "menu-title">Menu</div>
+            <div class = "menu-title" id = "menu-title">選單</div>
             <div class = "menu-categories" id = "menu-categories">
-                <div class = "menu-sub" id = "menu-all">All</div> 
-                <div class = "menu-sub" id = "menu-pastry">Pastry</div>      
-                <div class = "menu-sub" id = "menu-cake">Cake</div>      
-                <div class = "menu-sub" id = "menu-bread">Bread</div>   
-                <div class = "menu-sub" id = "menu-drinks">Drinks</div>   
+                <div class = "menu-sub" id = "menu-all">全部</div> 
+                <div class = "menu-sub" id = "menu-pastry">糕點</div>      
+                <div class = "menu-sub" id = "menu-cake">蛋糕</div>      
+                <div class = "menu-sub" id = "menu-bread">麵包</div>   
+                <div class = "menu-sub" id = "menu-drinks">飲料</div>   
             </div>
         </div>
         <div class = "menu-divider" id = "menu-divider"></div>
         <div class = "menu-content" id = "menu-content"></div>
         <div class="menu-pagination" id="menu-pagination">
-            <button id="prev-page" disabled>❮ Prev</button>
-            <span id="page-info">Page 1</span>
-            <button id="next-page">Next ❯</button>
+            <button id="prev-page" disabled>❮ 上</button>
+            <span id="page-info">頁 1</span>
+            <button id="next-page">下 ❯</button>
         </div>
     </section>
 
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadMenuItems(category = "all") {
         try {
-            const response = await fetch("./menu.json");
+            const response = await fetch("../menu.json");
             const menuItems = await response.json();
 
             menuContainer.innerHTML = ""; 
@@ -118,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const menuItem = document.createElement("div");
                 menuItem.classList.add("menu-item");
                 menuItem.innerHTML = `
-                    <img class = "menu-img" src="${item.image}" alt="${item.name}>
-                    <span class="menu-name">${item.name}</span>
+                    <img class = "menu-img" src=".${item.image}" alt="${item.chinese_name}>
+                    <span class="menu-name">${item.chinese_name}</span>
                     <span class="menu-price">${item.price}</span>
                 `;
                 //console.log(item.name);
@@ -166,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPage = 1;
             selectedCategory = category.textContent.toLowerCase();
             loadMenuItems(selectedCategory);
-            window.history.replaceState({}, document.title, `/menu.html?category=${selectedCategory}`);
+            window.history.replaceState({}, document.title, `/chinese-menu.html?category=${selectedCategory}`);
         });
     });
 });
