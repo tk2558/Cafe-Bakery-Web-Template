@@ -169,5 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
             window.history.replaceState({}, document.title, `/menu.html?category=${selectedCategory}`);
         });
     });
+    const langSwitch = document.getElementById("lang-toggle");
+    const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
+    
+    langSwitch.addEventListener("click", function () {
+        window.location.href =  './chinese/chinese-menu.html';
+    });
+    hiddenlangSwitch.addEventListener("click", function () {
+        window.location.href = './chinese/chinese-menu.html';
+    });
 });
 </script>

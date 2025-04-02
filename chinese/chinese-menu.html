@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
-
 <body>
     <header>
         <h1 class="logo">
@@ -20,7 +19,7 @@
         <nav class = "header-menu">
             <ul class = "header-ul">
                 <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
-                <li class = "header-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "header-li"><a href="./chinese-menu.html">產品介紹</a></li>
                 <li class = "header-li"><a href="about.html">關於大班</a></li>
                 <li class = "header-li"><a href="location.html">分店地點</a></li>
                 <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
@@ -36,7 +35,7 @@
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
                 <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
-                <li class = "hidden-li"><a href="menu.html">產品介紹</a></li>
+                <li class = "hidden-li"><a href="./chinese-menu.html">產品介紹</a></li>
                 <li class = "hidden-li"><a href="about.html">關於大班</a></li>
                 <li class = "hidden-li"><a href="location.html">分店地點</a></li>
                 <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
@@ -80,13 +79,22 @@
 </html>
 
 <script>
+    
+const cat = new Map([
+    ["全部", "all"],
+    ["糕點", "pastry"],
+    ["蛋糕", "cake"],
+    ["麵包", "bread"],
+    ["飲料", "drinks"],
+]);
+
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    let selectedCategory = getQueryParameter('category');
+    let selectedCategory = cat.get(getQueryParameter('category'));
     const categories = document.querySelectorAll('.menu-sub');
     const allCategory = document.getElementById('menu-all');
 
@@ -163,10 +171,20 @@ document.addEventListener('DOMContentLoaded', () => {
             categories.forEach(item => item.classList.remove('current-cat'));
             category.classList.add('current-cat');
             currentPage = 1;
-            selectedCategory = category.textContent.toLowerCase();
+            selectedCategory = cat.get(category.textContent.toLowerCase());
             loadMenuItems(selectedCategory);
-            window.history.replaceState({}, document.title, `/chinese-menu.html?category=${selectedCategory}`);
+            window.history.replaceState({}, document.title, `./chinese-menu.html?category=${selectedCategory}`);
         });
+    });
+
+    const langSwitch = document.getElementById("lang-toggle");
+    const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
+    
+    langSwitch.addEventListener("click", function () {
+        window.location.href = '../menu.html';
+     });
+    hiddenlangSwitch.addEventListener("click", function () {
+        window.location.href = '../menu.html';
     });
 });
 </script>
