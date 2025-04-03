@@ -35,8 +35,8 @@ Or open `index.html` in your browser after downloading.
 - **JSON** - Data handling for menu items
 
 ## 📸 Screenshots
-![Homepage](#https://github.com/tk2558/Cafe-Bakery-Web-Template/blob/main/screenshot/Home.JPG) 
-![Menu Page](#https://github.com/tk2558/Cafe-Bakery-Web-Template/blob/main/screenshot/Menu.JPG)
+![Homepage](https://github.com/tk2558/Cafe-Bakery-Web-Template/blob/main/screenshot/Home.JPG) 
+![Menu Page](https://github.com/tk2558/Cafe-Bakery-Web-Template/blob/main/screenshot/Menu.JPG)
 
 ## 🎨 Customization
 You can modify the template to fit your own bakery or business:
