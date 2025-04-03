@@ -1,32 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Template</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    
     <script defer src="script.js"></script>
 </head>
 
 <body>
     <header>
         <h1 class="logo">
-            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+            <a href="./chinese-home.html"><img src="../assets/logo.jpg" alt="logoImg"></a>
         </h1>
         <nav class = "header-menu">
             <ul class = "header-ul">
-                <li class = "header-li"><a href="index.html">Home</a></li>
-                <li class = "header-li"><a href="menu.html">Menu</a></li>
-                <li class = "header-li"><a href="about.html">About</a></li>
-                <li class = "header-li"><a href="location.html">Location</a></li>
-                <li class = "header-li"><a href="contact.html">Contact</a></li>
-                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "header-li"><a href="./chinese-menu.html">產品介紹</a></li>
+                <li class = "header-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "header-li"><a href="./chinese-location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
-                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                    <img class = "interface-menu" id = "interface-menu" src="../assets/interface.png"></img>
                 </li>
             </ul>
         </nav>
@@ -35,12 +35,12 @@
     <section class="hidden-menu" id = "hidden-menu">
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
-                <li class = "hidden-li"><a href="index.html">Home</a></li>
-                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
-                <li class = "hidden-li"><a href="about.html">About</a></li>
-                <li class = "hidden-li"><a href="location.html">Location</a></li>
-                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
-                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+                <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "hidden-li"><a href="./chinese-menu.html">產品介紹</a></li>
+                <li class = "hidden-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="./chinese-location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
         </nav>
     </section>
@@ -49,9 +49,9 @@
         <section class = "about-container" id = "about-container">
             <div class = "about-left" id = "about-left">
                 <div class = "about-title" id = "about-title">
-                    <div class="head">About Us</div>
+                    <div class="head">關於我們</div>
                 </div>
-                <img class = "about-img" id = "about-img" src="./imgs/front.jpg" alt="aboutImg"></img>
+                <img class = "about-img" id = "about-img" src="../imgs/front.jpg" alt="aboutImg"></img>
             </div>
             <div class = "gap" id = "gap"></div>
             <article class = "about-right" id = "about-right">
@@ -78,33 +78,33 @@
             </article>
             <div class = "gap" id = "gap"></div>
             <div class = "history-title" id = "history-title">
-                <div class="head">Our History</div>
+                <div class="head">我們的歷史</div>
             </div>
         </section>
     </section>
 
     <section class ="thanks">
         <section class = "thanks-container" id = "thanks-container">
-            <div class = "thanks-title">Thanks to our Staff!</div>
+            <div class = "thanks-title">感謝我們的員工!</div>
             <div class = "staff-collection">
                 <div class = "staff-item" id = "staff1">
-                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <img class = "staff-img" src="../assets/tmp.jpg"></img>
                     <span class ="staff-name">Name1</span>
                 </div>
                 <div class = "staff-item" id = "staff2">
-                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <img class = "staff-img" src="../assets/tmp.jpg"></img>
                     <span class ="staff-name">Name2</span>
                 </div>
                 <div class = "staff-item" id = "staff3">
-                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <img class = "staff-img" src="../assets/tmp.jpg"></img>
                     <span class ="staff-name">Name3</span>
                 </div>
                 <div class = "staff-item" id = "staff4">
-                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <img class = "staff-img" src="../assets/tmp.jpg"></img>
                     <span class ="staff-name">Name4</span>
                 </div>
                 <div class = "staff-item" id = "staff5">
-                    <img class = "staff-img" src="./assets/tmp.jpg"></img>
+                    <img class = "staff-img" src="../assets/tmp.jpg"></img>
                     <span class ="staff-name">Name5</span>
                 </div>
             </div>
@@ -138,10 +138,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
     
     langSwitch.addEventListener("click", function () {
-        window.location.href = './chinese/chinese-about.html';
+        window.location.href = '../about.html';
         });
     hiddenlangSwitch.addEventListener("click", function () {
-        window.location.href = './chinese/chinese-about.html';
+        window.location.href = '../about.html';
     });
 });
 </script>

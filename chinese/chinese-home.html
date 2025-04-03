@@ -21,8 +21,8 @@
             <ul class = "header-ul">
                 <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
                 <li class = "header-li"><a href="./chinese-menu.html">產品介紹</a></li>
-                <li class = "header-li"><a href="about.html">關於大班</a></li>
-                <li class = "header-li"><a href="location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "header-li"><a href="./chinese-location.html">分店地點</a></li>
                 <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
                 <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
@@ -37,8 +37,8 @@
             <ul class = "hidden-ul">
                 <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
                 <li class = "hidden-li"><a href="./chinese-menu.html">產品介紹</a></li>
-                <li class = "hidden-li"><a href="about.html">關於大班</a></li>
-                <li class = "hidden-li"><a href="location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="./chinese-location.html">分店地點</a></li>
                 <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
                 <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
@@ -50,7 +50,9 @@
         <div class = "prev-container" id = "prev"></div>
         <div class = "next-container" id = "next"></div>
     </section>
-
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
     <section class = "circle-container" id = "circle-container">
         <div class = "gallery-circle" id = "img-circle1"></div>
         <div class = "gallery-circle-grey" id = "gallery-circle2"></div>
@@ -112,8 +114,10 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
+    let autoSlideInterval;
     const circles = document.querySelectorAll(".gallery-circle, .gallery-circle-grey");
     const gallery = document.getElementById("gallery");
+    const progressBar = document.getElementById("progress-bar");
     const totalCircles = circles.length;
     const galleryImgs = [
         "../imgs/g1.jpg",
@@ -123,28 +127,33 @@ document.addEventListener("DOMContentLoaded", () => {
         "../imgs/g5.jpg"
     ];
     
-    document.getElementById("next").addEventListener("click", () => {
+    function updateGallery(next = true) {
         circles[currentIndex].classList.remove("gallery-circle");
         circles[currentIndex].classList.add("gallery-circle-grey");
-        
-        currentIndex = (currentIndex + 1) % totalCircles;
-        
-        circles[currentIndex].classList.remove("gallery-circle-grey");
-        circles[currentIndex].classList.add("gallery-circle");
-        gallery.src = `${galleryImgs[currentIndex]}`;
-    });
-    
-    document.getElementById("prev").addEventListener("click", () => {
-        circles[currentIndex].classList.remove("gallery-circle");
-        circles[currentIndex].classList.add("gallery-circle-grey");
-        
-        currentIndex = (currentIndex - 1 + totalCircles) % totalCircles;
-        
-        circles[currentIndex].classList.remove("gallery-circle-grey");
-        circles[currentIndex].classList.add("gallery-circle");
-        gallery.src = `${galleryImgs[currentIndex]}`;
-    });
 
+        currentIndex = next ? (currentIndex + 1) % totalCircles : (currentIndex - 1 + totalCircles) % totalCircles;
+
+        circles[currentIndex].classList.remove("gallery-circle-grey");
+        circles[currentIndex].classList.add("gallery-circle");
+        gallery.src = galleryImgs[currentIndex];
+
+        resetProgressBar();
+    }
+
+    function resetProgressBar() {
+        progressBar.style.transition = "none";
+        progressBar.style.width = "0%";
+        void progressBar.offsetWidth;
+        progressBar.style.transition = "width linear 20s";
+        progressBar.style.width = "100%";
+        
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => updateGallery(true), 20000);
+    }
+
+    document.getElementById("next").addEventListener("click", () => updateGallery(true));
+    document.getElementById("prev").addEventListener("click", () => updateGallery(false));
+    resetProgressBar();
     const langSwitch = document.getElementById("lang-toggle");
     const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
     

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Template</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../location.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -15,18 +14,18 @@
 <body>
     <header>
         <h1 class="logo">
-            <a href="index.html"><img src="./assets/logo.jpg" alt="logoImg"></a>
+            <a href="./chinese-home.html"><img src="../assets/logo.jpg" alt="logoImg"></a>
         </h1>
         <nav class = "header-menu">
             <ul class = "header-ul">
-                <li class = "header-li"><a href="index.html">Home</a></li>
-                <li class = "header-li"><a href="menu.html">Menu</a></li>
-                <li class = "header-li"><a href="about.html">About</a></li>
-                <li class = "header-li"><a href="location.html">Location</a></li>
-                <li class = "header-li"><a href="contact.html">Contact</a></li>
-                <li class="lang-toggle" id="lang-toggle">中文</li>
+                <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "header-li"><a href="./chinese-menu.html">產品介紹</a></li>
+                <li class = "header-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "header-li"><a href="./chinese-location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
-                    <img class = "interface-menu" id = "interface-menu" src="./assets/interface.png"></img>
+                    <img class = "interface-menu" id = "interface-menu" src="../assets/interface.png"></img>
                 </li>
             </ul>
         </nav>
@@ -35,12 +34,12 @@
     <section class="hidden-menu" id = "hidden-menu">
         <nav class = "hidden-nav">
             <ul class = "hidden-ul">
-                <li class = "hidden-li"><a href="index.html">Home</a></li>
-                <li class = "hidden-li"><a href="menu.html">Menu</a></li>
-                <li class = "hidden-li"><a href="about.html">About</a></li>
-                <li class = "hidden-li"><a href="location.html">Location</a></li>
-                <li class = "hidden-li"><a href="contact.html">Contact</a></li>
-                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">中文</li>
+                <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
+                <li class = "hidden-li"><a href="./chinese-menu.html">產品介紹</a></li>
+                <li class = "hidden-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="./chinese-location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
+                <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
         </nav>
     </section>
@@ -59,19 +58,19 @@
                 <span>136-29 Roosevelt Ave, Flushing, NY, 11354 </span>
             </article>
             <article class = "map-info" id = "map-info">
-                <span>Tel: (718) 353-0832</span>
+                <span>電話: (718) 353-0832</span>
             </article>
             <article class = "map-info" id = "map-info">
-                <span>Monday to Sunday: 6 AM - 6 PM </span>
+                <span>整週: 6 AM - 6 PM </span>
             </article>
             <article class = "map-note" id = "map-note">
-                *Hours may be subject to change due to weather, holidays, or unforseen events. <br>
-                We thank you for your understanding.
+                *營業時間可能會因天氣、假日或不可預見的事件而改變。 <br>
+                我們感謝您的理解.
             </article>
         </div>
     </section>
 
-    <section class = "map-title" id = "map-more">More Locations Coming...</section>
+    <section class = "map-title" id = "map-more">更多地點即將推出...</section>
 
     <footer>
         <p class="copyright">&copy; 2025 Mr.Tu Bakery. All rights reserved ● Designed by 
@@ -91,10 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
     
     langSwitch.addEventListener("click", function () {
-        window.location.href = './chinese/chinese-location.html';
+        window.location.href = '../location.html';
         });
     hiddenlangSwitch.addEventListener("click", function () {
-        window.location.href = './chinese/chinese-location.html';
+        window.location.href = '../location.html';
     });
 });
 </script>

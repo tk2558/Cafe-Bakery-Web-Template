@@ -21,8 +21,8 @@
             <ul class = "header-ul">
                 <li class = "header-li"><a href="./chinese-home.html">主頁</a></li>
                 <li class = "header-li"><a href="./chinese-menu.html">產品介紹</a></li>
-                <li class = "header-li"><a href="about.html">關於大班</a></li>
-                <li class = "header-li"><a href="location.html">分店地點</a></li>
+                <li class = "header-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "header-li"><a href="./chinese-location.html">分店地點</a></li>
                 <li class = "header-li"><a href="./chinese-contact.html">聯絡我們</a></li>
                 <li class="lang-toggle" id="lang-toggle">English</li>
                 <li class="interface" id="interface"> 
@@ -37,8 +37,8 @@
             <ul class = "hidden-ul">
                 <li class = "hidden-li"><a href="./chinese-home.html">主頁</a></li>
                 <li class = "hidden-li"><a href="./chinese-menu.html">產品介紹</a></li>
-                <li class = "hidden-li"><a href="about.html">關於大班</a></li>
-                <li class = "hidden-li"><a href="location.html">分店地點</a></li>
+                <li class = "hidden-li"><a href="./chinese-about.html">關於大班</a></li>
+                <li class = "hidden-li"><a href="./chinese-location.html">分店地點</a></li>
                 <li class = "hidden-li"><a href="./chinese-contact.html">聯絡我們</a></li>
                 <li class = "hidden-lang-toggle" id="hidden-lang-toggle">English</li>
             </ul>
@@ -79,15 +79,15 @@
 </html>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const langSwitch = document.getElementById("lang-toggle");
-        const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
-        
-        langSwitch.addEventListener("click", function () {
-            window.location.href = '../contact.html';
-         });
-        hiddenlangSwitch.addEventListener("click", function () {
-            window.location.href = '../contact.html';
+document.addEventListener("DOMContentLoaded", () => {
+    const langSwitch = document.getElementById("lang-toggle");
+    const hiddenlangSwitch = document.getElementById("hidden-lang-toggle");
+    
+    langSwitch.addEventListener("click", function () {
+        window.location.href = '../contact.html';
         });
+    hiddenlangSwitch.addEventListener("click", function () {
+        window.location.href = '../contact.html';
     });
+});
 </script>
