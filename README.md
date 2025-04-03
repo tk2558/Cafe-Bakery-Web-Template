@@ -1,6 +1,6 @@
 # Cafe-Bakery-Web-Template
 
-This is an unofficial bakery website built using **HTML, CSS, JavaScript, and JSON**. It serves as a case study and a template for future bakery or small business websites.
+This is an unofficial bakery website built using **HTML, CSS, JavaScript, and JSON**. It serves as a case study and a template for future bakery or small business websites. Example Bakery used here is Mr.Tu Bakery (https://www.yelp.com/biz/mr-tu-bakery-flushing)
 
 ## 🚀 Features
 - 🍰 **Fully Responsive Design** - Works on mobile, tablet, and desktop.
