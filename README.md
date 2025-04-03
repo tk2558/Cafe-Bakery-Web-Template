@@ -8,6 +8,7 @@ This is an unofficial bakery website built using **HTML, CSS, JavaScript, and JS
 - 🎨 **Modern UI/UX** - Styled with CSS for an elegant look.
 - 🎬 **Smooth Animations** - Includes small animations to engage viewers
 - 📞 **Contact Page** - Includes a simple form to reach out.
+- Switch between English and Chinese Version.
 
 ## 🌐 Live Demo
 [Live demo](#) *()*
