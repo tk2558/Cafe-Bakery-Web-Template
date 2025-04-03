@@ -11,7 +11,7 @@ This is an unofficial bakery website built using **HTML, CSS, JavaScript, and JS
 - Switch between English and Chinese Version.
 
 ## 🌐 Live Demo
-[Live demo](#) *()*
+[Live demo](https://github.com/tk2558/Cafe-Bakery-Web-Template/blob/main/screenshot/WebDemo.gif) *(Demo)*
 
 ## 📥 Installation & Usage
 To run the project locally:
